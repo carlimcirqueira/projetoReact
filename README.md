@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-# React + Vite
+1. *Oque ficou repetitivo no codigo ?*
+Para cada item na lista de menu o codigo teria que percorrer uma posicao da lista para mostrar o valor na tela, e o formato de cada item ficou igual demais
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# projetoReact
->>>>>>> 4cd33da10bd5151d3f97bea2cb6a3abfdb1e2a71
+2. *Se a lanchonete tivesse 30 itens, oque aconteceria?*
+Não iria caber na tela e seria necessário scrollar para olhar oque esta faltando mostrar

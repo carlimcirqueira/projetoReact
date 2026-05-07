@@ -8,7 +8,11 @@ function App() {
     { id: 2, name: '🌭 Cachorro Quente Prensado', price: 18.00 },
     { id: 3, name: '🍟 Porção de Batata Especial', price: 25.00 },
     { id: 4, name: '🍗 Coxinha com Catupiry', price: 9.00 },
-    { id: 5, name: '🥤 Suco de Laranja Natural', price: 12.00 }
+    { id: 5, name: '🥤 Suco de Laranja Natural', price: 12.00 },
+    { id: 6, name: '🥤 Suco de Laranja Natural', price: 12.00 },
+    { id: 7, name: '🥤 Suco de Laranja Natural', price: 12.00 },
+    { id: 8, name: '🥤 Suco de Laranja Natural', price: 12.00 },
+    { id: 9, name: '🥤 Suco de Laranja Natural', price: 12.00 }
   ];
 
   return (
