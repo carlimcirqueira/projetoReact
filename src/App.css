@@ -1,0 +1,44 @@
+#root {
+  max-width: 500px; /* Diminuímos a largura pois tem menos texto */
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: sans-serif;
+}
+
+.cardapio-container h1 {
+  text-align: center;
+  color: #ff5722;
+  margin-bottom: 2rem;
+}
+
+.lista-lanches {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lanche-item {
+  display: flex;
+  justify-content: space-between; /* Empurra o nome pra esquerda e preço pra direita */
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px dashed #ccc; /* Linha tracejada separando os itens */
+}
+
+/* Tira a borda do último item */
+.lanche-item:last-child {
+  border-bottom: none;
+}
+
+.lanche-item h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.lanche-preco {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2e7d32;
+}
