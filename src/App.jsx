@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react'; // 1. Importando o useState
 import './App.css';
-// 1. Importe o componente aqui (ajuste o caminho se não usou a pasta components)
 import ItemCardapio from './itenscardapio';
 
 function App() {
+  // 2. Criando o Estado. Começa com 0.
+  // 'totalItens' é o valor, 'setTotalItens' é a função que atualiza esse valor.
+  const [totalItens, setTotalItens] = useState(0);
+
+  // 3. Função que será executada quando qualquer botão for clicado
+  const adicionarAoPedido = () => {
+    setTotalItens(totalItens + 1);
+  };
+
   const menuItems = [
     { id: 1, name: '🍔 X-Tudo Monstro', price: 28.50 },
     { id: 2, name: '🌭 Cachorro Quente Prensado', price: 18.00 },
@@ -14,15 +22,21 @@ function App() {
 
   return (
     <div className="cardapio-container">
+      {/* 4. Exibindo o contador no topo da página */}
+      <div className="contador-pedido">
+        Total de itens no pedido: <strong>{totalItens}</strong>
+      </div>
+      <h1>----------------------------------------</h1>
       <h1>Menu da Lanchonete</h1>
 
       <ul className="lista-lanches">
         {menuItems.map((item) => (
-          // 2. Use o componente normalmente
           <ItemCardapio 
             key={item.id} 
             nome={item.name} 
             preco={item.price} 
+            // 5. Passando a função como "propriedade" para o componente filho
+            onAdicionar={adicionarAoPedido} 
           />
         ))}
       </ul>

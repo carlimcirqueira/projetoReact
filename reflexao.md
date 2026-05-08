@@ -14,3 +14,14 @@ Somente no app.css, 1 lugar só. Em que todos os componentes gerados para mostra
 
 3. Como os dados (nome,preço) chegaram dentro do componente?
 Atraves de uma lista que está dentro de app.jsx passada na função do componente que foi importada
+
+
+REFLEXAO FINAL
+
+1. Por que uma variavel comum let total = 0 nao atualiza a tela?
+Por ela não utilizar o useState que é um gancho do react, ela não consegue mostrar efetivamente na tela as mudanças dessa variavel
+
+2. Onde foi necessário guardar o número total - no App.jsx ou no ItemCardapio.jsx? Por quê?
+Foi necessario guardar o numero total dentro de "const [totalItens, setTotalItens] = useState(0);"
+
+3. Como o botão filho consegue avisar o App que houve um clique ?

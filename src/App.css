@@ -1,42 +1,69 @@
-/* Container principal do cardápio */
-.cardapio-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Lista de itens do cardápio */
-.lista-lanches {
-  width: 100%;
-  padding: 0;
-  list-style: none;
-}
-
-/* Cada item do cardápio como uma "caixa" ou cartão */
 .lanche-item {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Empurra info para um lado e botão para o outro */
   align-items: center;
   width: 100%;
-  margin-bottom: 20px; /* Espaçamento entre os cartões */
-  padding: 15px;
-  background-color: #fff; /* Fundo branco para destacar */
-  border: 1px solid #ddd; /* Borda sutil */
-  border-radius: 8px; /* Cantos arredondados */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9); /* Sombra para dar profundidade */
+  max-width: 500px;    /* Controla a largura da caixa */
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
 }
 
-/* Nome do lanche */
-.lanche-item h2 {
-  margin: 0;
-  font-size: 1.50rem;
+.lanche-item:hover {
+  transform: scale(1.02); /* Efeito sutil ao passar o mouse */
 }
 
-/* Preço do lanche */
-.lanche-preco {
+.lanche-info {
+  text-align: left; /* Alinha o texto à esquerda dentro da caixa */
+}
+
+/* Estilização do Botão */
+.btn-adicionar {
+  background-color: #ff5722; /* Cor clássica de lanchonete */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
   font-weight: bold;
-  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-adicionar:hover {
+  background-color: #e64a19; /* Laranja mais escuro no hover */
+}
+
+.btn-adicionar:active {
+  transform: scale(0.95); /* Efeito de "apertar" o botão */
+}
+
+/* Responsividade: No celular, coloca o botão embaixo do texto */
+@media (max-width: 480px) {
+  .lanche-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  .lanche-info {
+    text-align: center;
+  }
+}
+
+/* Estilo do Contador no topo */
+.contador-pedido {
+  background-color: #2e7d32; /* Verde para remeter a "sucesso" e dinheiro */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(46, 125, 50, 0.3);
+  
+  /* Faz o contador ficar fixo no topo da tela caso a lista seja muito longa */
+  position: sticky; 
+  top: 20px;
+  z-index: 100;
 }
