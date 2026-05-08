@@ -18,10 +18,11 @@ Atraves de uma lista que está dentro de app.jsx passada na função do componen
 
 REFLEXAO FINAL
 
-1. Por que uma variavel comum let total = 0 nao atualiza a tela?
+1. Por que uma variavel comum let total = 0 nao atualiza a tela?<br />
 Por ela não utilizar o useState que é um gancho do react, ela não consegue mostrar efetivamente na tela as mudanças dessa variavel
 
 2. Onde foi necessário guardar o número total - no App.jsx ou no ItemCardapio.jsx? Por quê?
-Foi necessario guardar o numero total dentro de "const [totalItens, setTotalItens] = useState(0);"
+Foi necessario guardar o numero total dentro de "const [totalItens, setTotalItens] = useState(0);" que esta no app.jsx, pois a aplicação que esta sendo rodada é o app.jsx que possui alguns valores mockados, o itemCardapio so serve para fornecer os componentes que guardam esses valores do app.jsx
 
 3. Como o botão filho consegue avisar o App que houve um clique ?
+Ao chamar
